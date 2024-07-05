@@ -8,8 +8,9 @@ See https://joshcurry.co.uk/posts/pan-tilt-controls-not-available-on-logitech-or
 for enabling the controls in v4l2.
 
 TLDR:
-sudo apt install libwebcam0 uvcdynctrl
-sudo uvcdynctrl --import=/usr/share/uvcdynctrl/data/046d/logitech.xml
+
+    sudo apt install libwebcam0 uvcdynctrl
+    sudo uvcdynctrl --import=/usr/share/uvcdynctrl/data/046d/logitech.xml
 
 -------
 This is a fork of http://sourceforge.net/projects/mjpg-streamer/ with added support for the Raspberry Pi camera via the input_raspicam plugin.
