@@ -202,10 +202,22 @@ int uvcPanTilt(int dev, int pan, int tilt, int reset)
         ctrls.controls = xctrls;
     } else {
         xctrls[0].id = V4L2_CID_PAN_RELATIVE_LOGITECH;
-        xctrls[0].value = pan;
         xctrls[1].id = V4L2_CID_TILT_RELATIVE_LOGITECH;
-        xctrls[1].value = -tilt;
+        xctrls[1].value = 0;
+        xctrls[0].value = 0;
+        ctrls.count = 2;
+        ctrls.controls = xctrls;
 
+
+	if(ioctl(dev, VIDIOC_S_EXT_CTRLS, &ctrls) < 0) {
+	  DBG("Error in uvcPanTilt");
+	  return -1;
+	}
+        xctrls[0].id = V4L2_CID_PAN_RELATIVE_LOGITECH;
+        xctrls[1].id = V4L2_CID_TILT_RELATIVE_LOGITECH;
+
+	xctrls[0].value = pan;
+	xctrls[1].value = -tilt;
         ctrls.count = 2;
         ctrls.controls = xctrls;
     }
