@@ -1,7 +1,16 @@
 mjpg-streamer
 =============
 
-This fork adds pan tilt controls useful for the quickcam orbit sphere
+This fork adds pan tilt controls useful for the Quickcam Orbit Sphere AF.  
+pt.html gives pan tilt controls (buttons are giant to make them usable on mobile).
+
+See https://joshcurry.co.uk/posts/pan-tilt-controls-not-available-on-logitech-orbit-sphere-af-on-linux/
+for enabling the controls in v4l2.
+
+TLDR:
+sudo apt install libwebcam0 uvcdynctrl
+sudo uvcdynctrl --import=/usr/share/uvcdynctrl/data/046d/logitech.xml
+
 
 This is a fork of http://sourceforge.net/projects/mjpg-streamer/ with added support for the Raspberry Pi camera via the input_raspicam plugin.
 
