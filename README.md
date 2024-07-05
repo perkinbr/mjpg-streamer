@@ -11,7 +11,7 @@ TLDR:
 sudo apt install libwebcam0 uvcdynctrl
 sudo uvcdynctrl --import=/usr/share/uvcdynctrl/data/046d/logitech.xml
 
-
+-------
 This is a fork of http://sourceforge.net/projects/mjpg-streamer/ with added support for the Raspberry Pi camera via the input_raspicam plugin.
 
 mjpg-streamer is a command line application that copies JPEG frames from one
