@@ -1,6 +1,8 @@
 mjpg-streamer
 =============
 
+This fork adds pan tilt controls useful for the quickcam orbit sphere
+
 This is a fork of http://sourceforge.net/projects/mjpg-streamer/ with added support for the Raspberry Pi camera via the input_raspicam plugin.
 
 mjpg-streamer is a command line application that copies JPEG frames from one
